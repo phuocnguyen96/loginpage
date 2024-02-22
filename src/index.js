@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import { ChakraProvider } from '@chakra-ui/react'
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './components/styles.css';
+import HeaderComponent from './components/Shopee Project/HeaderComponent';
+import MainComponent from './components/Shopee Project/MainComponent';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider>
+      <HeaderComponent />
+      <MainComponent />
+    </ChakraProvider>
   </React.StrictMode>
 );
 
